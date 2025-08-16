@@ -310,12 +310,47 @@
 
             // --- Hero Title Character Animation ---
             const heroTitle = document.getElementById('hero-title');
-            const titleText = "Investing In The <span class='gradient-text'>Next Wave</span> Of Innovation";
-            heroTitle.innerHTML = titleText.replace(/<span class='gradient-text'>Next Wave<\/span>/g, "<span class='gradient-text hero-title-char' style='animation-delay: 0.5s;'>Next Wave</span>")
-                                         .replace(/([^<]+)(?![^>]*>)/g, (match) => {
-                                             return match.split('').map((char, index) => `<span class="hero-title-char" style="animation-delay:${index * 0.02}s">${char}</span>`).join('');
-                                         });
+            const fullTitle = "Investing In The <span class='gradient-text'>Next Wave</span> of Innovation";
             
+            // Function to wrap each character in a span for animation
+            function wrapTextInSpans(text, startIndex) {
+                let html = '';
+                for (let i = 0; i < text.length; i++) {
+                    const char = text[i];
+                    const delay = (startIndex + i) * 0.02;
+                    if (char === ' ') {
+                        html += `<span class="hero-title-char" style="animation-delay:${delay}s">&nbsp;</span>`;
+                    } else {
+                        html += `<span class="hero-title-char" style="animation-delay:${delay}s">${char}</span>`;
+                    }
+                }
+                return html;
+            }
+
+            // Find the location of the gradient text
+            const gradientStartTag = "<span class='gradient-text'>";
+            const gradientEndTag = "</span>";
+            const gradientStartIndex = fullTitle.indexOf(gradientStartTag);
+            const gradientEndIndex = fullTitle.indexOf(gradientEndTag) + gradientEndTag.length;
+            
+            let finalHtml = '';
+            let charIndex = 0;
+            
+            // Add the text before the gradient part
+            const textBefore = fullTitle.substring(0, gradientStartIndex);
+            finalHtml += wrapTextInSpans(textBefore, charIndex);
+            charIndex += textBefore.length;
+
+            // Add the gradient part as-is
+            const gradientText = fullTitle.substring(gradientStartIndex, gradientEndIndex);
+            finalHtml += gradientText;
+            
+            // Add the text after the gradient part
+            const textAfter = fullTitle.substring(gradientEndIndex);
+            finalHtml += wrapTextInSpans(textAfter, charIndex);
+
+            heroTitle.innerHTML = finalHtml;
+
             // --- Dark Mode Toggle Logic ---
             const themeToggleBtn = document.getElementById('theme-toggle');
             const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
