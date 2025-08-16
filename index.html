@@ -19,7 +19,6 @@
             --text-primary: #1a202c;
             --text-secondary: #4a5568;
             --text-headings: #111827;
-            --shadow-color: rgba(0, 0, 0, 0.1);
             --header-bg: rgba(255, 255, 255, 0.8);
         }
 
@@ -29,7 +28,6 @@
             --text-primary: #F9FAFB;
             --text-secondary: #9CA3AF;
             --text-headings: #FFFFFF;
-            --shadow-color: rgba(0, 0, 0, 0.4);
             --header-bg: rgba(17, 24, 39, 0.8);
         }
 
@@ -47,8 +45,6 @@
         .text-headings { color: var(--text-headings); }
         
         header { background-color: var(--header-bg); }
-        .custom-shadow { box-shadow: 0 10px 15px -3px var(--shadow-color), 0 4px 6px -2px var(--shadow-color); }
-        .custom-shadow-sm { box-shadow: 0 1px 2px 0 var(--shadow-color); }
 
         /* Animation for elements fading in on scroll */
         .scroll-animate {
@@ -99,7 +95,7 @@
 <body class="antialiased">
 
     <!-- Header -->
-    <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-sm custom-shadow-sm">
+    <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-sm">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" class="text-2xl font-bold text-headings">NextGen <span class="text-indigo-600">Ventures</span></a>
             <nav class="hidden md:flex space-x-8 items-center">
@@ -155,7 +151,7 @@
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
                     <!-- Feature 1 -->
-                    <div class="bg-secondary p-8 rounded-2xl custom-shadow scroll-animate" style="transition-delay: 200ms;">
+                    <div class="bg-secondary p-8 rounded-2xl scroll-animate" style="transition-delay: 200ms;">
                         <div class="text-indigo-500 mb-4">
                             <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                         </div>
@@ -163,7 +159,7 @@
                         <p class="text-secondary">We invest in pre-seed and seed stage startups, providing the first institutional capital to get your idea off the ground.</p>
                     </div>
                     <!-- Feature 2 -->
-                    <div class="bg-secondary p-8 rounded-2xl custom-shadow scroll-animate" style="transition-delay: 300ms;">
+                    <div class="bg-secondary p-8 rounded-2xl scroll-animate" style="transition-delay: 300ms;">
                         <div class="text-indigo-500 mb-4">
                              <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M15 21a6 6 0 00-9-5.197m0 0A10.99 10.99 0 0112 12a10.99 10.99 0 017 4.803"></path></svg>
                         </div>
@@ -171,7 +167,7 @@
                         <p class="text-secondary">Join an exclusive community of ambitious young founders. Share challenges, celebrate wins, and grow together.</p>
                     </div>
                     <!-- Feature 3 -->
-                    <div class="bg-secondary p-8 rounded-2xl custom-shadow scroll-animate" style="transition-delay: 400ms;">
+                    <div class="bg-secondary p-8 rounded-2xl scroll-animate" style="transition-delay: 400ms;">
                         <div class="text-indigo-500 mb-4">
                            <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
                         </div>
@@ -194,26 +190,26 @@
                 </div>
                  <!-- Team image moved here -->
                 <div class="mb-16 scroll-animate">
-                    <img loading="lazy" src="https://placehold.co/1200x600/E5E7EB/4B5563?text=Our+Team" alt="NextGen Ventures Team" class="w-full h-auto object-cover rounded-3xl custom-shadow">
+                    <img loading="lazy" src="https://placehold.co/1200x600/E5E7EB/4B5563?text=Our+Team" alt="NextGen Ventures Team" class="w-full h-auto object-cover rounded-3xl">
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
                     <!-- Stat 1 -->
-                    <div class="bg-primary p-8 rounded-2xl custom-shadow scroll-animate" style="transition-delay: 200ms;">
+                    <div class="bg-primary p-8 rounded-2xl scroll-animate" style="transition-delay: 200ms;">
                         <div class="text-4xl font-extrabold text-indigo-600 mb-2">50+</div>
                         <h3 class="text-xl font-semibold text-headings">Years of Collective Experience</h3>
                     </div>
                     <!-- Stat 2 -->
-                    <div class="bg-primary p-8 rounded-2xl custom-shadow scroll-animate" style="transition-delay: 300ms;">
+                    <div class="bg-primary p-8 rounded-2xl scroll-animate" style="transition-delay: 300ms;">
                         <div class="text-4xl font-extrabold text-indigo-600 mb-2">20+</div>
                         <h3 class="text-xl font-semibold text-headings">Successful Exits</h3>
                     </div>
                     <!-- Stat 3 -->
-                    <div class="bg-primary p-8 rounded-2xl custom-shadow scroll-animate" style="transition-delay: 400ms;">
+                    <div class="bg-primary p-8 rounded-2xl scroll-animate" style="transition-delay: 400ms;">
                         <div class="text-4xl font-extrabold text-indigo-600 mb-2">10+</div>
                         <h3 class="text-xl font-semibold text-headings">Industries Represented</h3>
                     </div>
                     <!-- Stat 4 -->
-                    <div class="bg-primary p-8 rounded-2xl custom-shadow scroll-animate" style="transition-delay: 500ms;">
+                    <div class="bg-primary p-8 rounded-2xl scroll-animate" style="transition-delay: 500ms;">
                         <div class="text-4xl font-extrabold text-indigo-600 mb-2">100%</div>
                         <h3 class="text-xl font-semibold text-headings">Founder-Focused</h3>
                     </div>
@@ -232,7 +228,7 @@
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Portfolio Item 1 -->
-                    <div class="bg-secondary rounded-2xl overflow-hidden custom-shadow group transform hover:-translate-y-2 transition-transform duration-300 scroll-animate" style="transition-delay: 200ms;">
+                    <div class="bg-secondary rounded-2xl overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300 scroll-animate" style="transition-delay: 200ms;">
                         <img loading="lazy" src="https://placehold.co/600x400/E2E8F0/4A5568?text=InnovateAI" alt="InnovateAI" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-headings mb-2">InnovateAI</h3>
@@ -241,7 +237,7 @@
                         </div>
                     </div>
                     <!-- Portfolio Item 2 -->
-                    <div class="bg-secondary rounded-2xl overflow-hidden custom-shadow group transform hover:-translate-y-2 transition-transform duration-300 scroll-animate" style="transition-delay: 300ms;">
+                    <div class="bg-secondary rounded-2xl overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300 scroll-animate" style="transition-delay: 300ms;">
                         <img loading="lazy" src="https://placehold.co/600x400/D1FAE5/10B981?text=EcoSolutions" alt="EcoSolutions" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-semibold text-headings mb-2">EcoSolutions</h3>
@@ -250,7 +246,7 @@
                         </div>
                     </div>
                     <!-- Portfolio Item 3 -->
-                    <div class="bg-secondary rounded-2xl overflow-hidden custom-shadow group transform hover:-translate-y-2 transition-transform duration-300 scroll-animate" style="transition-delay: 400ms;">
+                    <div class="bg-secondary rounded-2xl overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300 scroll-animate" style="transition-delay: 400ms;">
                         <img loading="lazy" src="https://placehold.co/600x400/FEF3C7/F59E0B?text=FinTech+Future" alt="FinTech Future" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-headings mb-2">FinTech Future</h3>
