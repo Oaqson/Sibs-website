@@ -19,6 +19,7 @@
             --text-primary: #1a202c;
             --text-secondary: #4a5568;
             --text-headings: #111827;
+            --shadow-color: rgba(0, 0, 0, 0.1);
             --header-bg: rgba(255, 255, 255, 0.8);
         }
 
@@ -28,6 +29,7 @@
             --text-primary: #F9FAFB;
             --text-secondary: #9CA3AF;
             --text-headings: #FFFFFF;
+            --shadow-color: rgba(0, 0, 0, 0.4);
             --header-bg: rgba(17, 24, 39, 0.8);
         }
 
@@ -45,7 +47,7 @@
         .text-headings { color: var(--text-headings); }
         
         header { background-color: var(--header-bg); }
-
+        
         /* Animation for elements fading in on scroll */
         .scroll-animate {
             opacity: 0;
@@ -75,11 +77,19 @@
         
         /* Gradient text effect */
         .gradient-text {
-            background: linear-gradient(45deg, #4F46E5, #0EA5E9);
+            background: linear-gradient(90deg, #60A5FA, #3B82F6, #1D4ED8, #60A5FA);
+            background-size: 200% auto;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
             text-fill-color: transparent;
+            animation: animateGradient 3s linear infinite;
+        }
+
+        @keyframes animateGradient {
+            to {
+                background-position: 100% 0;
+            }
         }
 
         /* Custom button style */
@@ -88,7 +98,41 @@
         }
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.2), 0 4px 6px -2px rgba(79, 70, 229, 0.1);
+        }
+
+        /* Styles for the community section */
+        .community-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 1rem;
+            background-color: var(--bg-secondary);
+        }
+
+        .community-card-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        
+        .community-card-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 1.5rem;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4), transparent);
+            color: #fff;
+        }
+
+        .dark .community-card-content {
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4), transparent);
+        }
+
+        .community-card h3, .community-card p {
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
         }
     </style>
 </head>
@@ -100,6 +144,7 @@
             <a href="#" class="text-2xl font-bold text-headings">NextGen <span class="text-indigo-600">Ventures</span></a>
             <nav class="hidden md:flex space-x-8 items-center">
                 <a href="#about" class="text-secondary hover:text-indigo-600 transition">About</a>
+                <a href="#community" class="text-secondary hover:text-indigo-600 transition">Community</a>
                 <a href="#team" class="text-secondary hover:text-indigo-600 transition">Team</a>
                 <a href="#portfolio" class="text-secondary hover:text-indigo-600 transition">Portfolio</a>
                 <a href="#thesis" class="text-secondary hover:text-indigo-600 transition">Thesis</a>
@@ -117,6 +162,7 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
              <a href="#about" class="block py-2 text-secondary hover:text-indigo-600">About</a>
+             <a href="#community" class="block py-2 text-secondary hover:text-indigo-600">Community</a>
              <a href="#team" class="block py-2 text-secondary hover:text-indigo-600">Team</a>
              <a href="#portfolio" class="block py-2 text-secondary hover:text-indigo-600">Portfolio</a>
              <a href="#thesis" class="block py-2 text-secondary hover:text-indigo-600">Thesis</a>
@@ -178,8 +224,51 @@
             </div>
         </section>
 
+        <!-- Community Section -->
+        <section id="community" class="py-20 lg:py-32 bg-secondary">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-headings scroll-animate">Join a thriving community.</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Panel 1 -->
+                    <div class="community-card aspect-[3/4] md:aspect-[unset] md:h-96 scroll-animate" style="transition-delay: 200ms;">
+                        <img loading="lazy" src="https://placehold.co/600x800/2C528B/FFFFFF?text=Community+Event" alt="Community Event" class="community-card-image">
+                        <div class="community-card-content flex flex-col justify-end h-full">
+                            <h3 class="text-xl font-bold mb-1">Youth-Led Hackathons</h3>
+                            <p class="text-sm font-light">Bring your ideas to life alongside other young innovators.</p>
+                        </div>
+                    </div>
+                    <!-- Panel 2 -->
+                    <div class="community-card aspect-[3/4] md:aspect-[unset] md:h-96 scroll-animate" style="transition-delay: 300ms;">
+                        <img loading="lazy" src="https://placehold.co/600x800/4F46E5/FFFFFF?text=Builders+at+Work" alt="Builders at Work" class="community-card-image">
+                        <div class="community-card-content flex flex-col justify-end h-full">
+                            <p class="text-5xl font-bold text-emerald-400">48,000+</p>
+                            <p class="text-sm font-light mt-2">Youthful builders in our network</p>
+                        </div>
+                    </div>
+                    <!-- Panel 3 -->
+                    <div class="community-card aspect-[3/4] md:aspect-[unset] md:h-96 scroll-animate" style="transition-delay: 400ms;">
+                        <img loading="lazy" src="https://placehold.co/600x800/1D4ED8/FFFFFF?text=Speaker+Event" alt="Speaker Event" class="community-card-image">
+                        <div class="community-card-content flex flex-col justify-end h-full">
+                            <h3 class="text-xl font-bold mb-1">Building a local chapter</h3>
+                            <p class="text-sm font-light">Meet and connect with other founders in your city at our regular events and workshops.</p>
+                        </div>
+                    </div>
+                    <!-- Panel 4 -->
+                    <div class="community-card aspect-[3/4] md:aspect-[unset] md:h-96 scroll-animate" style="transition-delay: 500ms;">
+                        <img loading="lazy" src="https://placehold.co/600x800/083344/FFFFFF?text=Conference+Attendees" alt="Conference Attendees" class="community-card-image">
+                        <div class="community-card-content flex flex-col justify-end h-full">
+                            <p class="text-5xl font-bold text-emerald-400">9,300+</p>
+                            <p class="text-sm font-light mt-2">Total community event attendees</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Team Section -->
-        <section id="team" class="py-20 lg:py-32 bg-secondary">
+        <section id="team" class="py-20 lg:py-32 bg-primary">
             <div class="container mx-auto px-6">
                 
                 <div class="text-center mb-16">
@@ -194,22 +283,22 @@
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
                     <!-- Stat 1 -->
-                    <div class="bg-primary p-8 rounded-2xl scroll-animate" style="transition-delay: 200ms;">
+                    <div class="bg-secondary p-8 rounded-2xl scroll-animate" style="transition-delay: 200ms;">
                         <div class="text-4xl font-extrabold text-indigo-600 mb-2">50+</div>
                         <h3 class="text-xl font-semibold text-headings">Years of Collective Experience</h3>
                     </div>
                     <!-- Stat 2 -->
-                    <div class="bg-primary p-8 rounded-2xl scroll-animate" style="transition-delay: 300ms;">
+                    <div class="bg-secondary p-8 rounded-2xl scroll-animate" style="transition-delay: 300ms;">
                         <div class="text-4xl font-extrabold text-indigo-600 mb-2">20+</div>
                         <h3 class="text-xl font-semibold text-headings">Successful Exits</h3>
                     </div>
                     <!-- Stat 3 -->
-                    <div class="bg-primary p-8 rounded-2xl scroll-animate" style="transition-delay: 400ms;">
+                    <div class="bg-secondary p-8 rounded-2xl scroll-animate" style="transition-delay: 400ms;">
                         <div class="text-4xl font-extrabold text-indigo-600 mb-2">10+</div>
                         <h3 class="text-xl font-semibold text-headings">Industries Represented</h3>
                     </div>
                     <!-- Stat 4 -->
-                    <div class="bg-primary p-8 rounded-2xl scroll-animate" style="transition-delay: 500ms;">
+                    <div class="bg-secondary p-8 rounded-2xl scroll-animate" style="transition-delay: 500ms;">
                         <div class="text-4xl font-extrabold text-indigo-600 mb-2">100%</div>
                         <h3 class="text-xl font-semibold text-headings">Founder-Focused</h3>
                     </div>
@@ -218,7 +307,7 @@
         </section>
         
         <!-- Portfolio Section -->
-        <section id="portfolio" class="py-20 lg:py-32 bg-primary">
+        <section id="portfolio" class="py-20 lg:py-32 bg-secondary">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold text-headings scroll-animate">The Visionaries We've Backed</h2>
@@ -228,7 +317,7 @@
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Portfolio Item 1 -->
-                    <div class="bg-secondary rounded-2xl overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300 scroll-animate" style="transition-delay: 200ms;">
+                    <div class="bg-primary rounded-2xl overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300 scroll-animate" style="transition-delay: 200ms;">
                         <img loading="lazy" src="https://placehold.co/600x400/E2E8F0/4A5568?text=InnovateAI" alt="InnovateAI" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-headings mb-2">InnovateAI</h3>
@@ -237,7 +326,7 @@
                         </div>
                     </div>
                     <!-- Portfolio Item 2 -->
-                    <div class="bg-secondary rounded-2xl overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300 scroll-animate" style="transition-delay: 300ms;">
+                    <div class="bg-primary rounded-2xl overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300 scroll-animate" style="transition-delay: 300ms;">
                         <img loading="lazy" src="https://placehold.co/600x400/D1FAE5/10B981?text=EcoSolutions" alt="EcoSolutions" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-semibold text-headings mb-2">EcoSolutions</h3>
@@ -246,7 +335,7 @@
                         </div>
                     </div>
                     <!-- Portfolio Item 3 -->
-                    <div class="bg-secondary rounded-2xl overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300 scroll-animate" style="transition-delay: 400ms;">
+                    <div class="bg-primary rounded-2xl overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300 scroll-animate" style="transition-delay: 400ms;">
                         <img loading="lazy" src="https://placehold.co/600x400/FEF3C7/F59E0B?text=FinTech+Future" alt="FinTech Future" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-headings mb-2">FinTech Future</h3>
@@ -259,7 +348,7 @@
         </section>
 
         <!-- Thesis Section -->
-        <section id="thesis" class="py-20 lg:py-32 bg-secondary">
+        <section id="thesis" class="py-20 lg:py-32 bg-primary">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold text-headings scroll-animate">Our Investment Thesis</h2>
@@ -299,7 +388,7 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="py-20 lg:py-32 bg-primary">
+        <section id="contact" class="py-20 lg:py-32 bg-secondary">
             <div class="container mx-auto px-6 text-center">
                  <h2 class="text-3xl md:text-4xl font-bold text-headings scroll-animate">Ready to build the future?</h2>
                  <p class="mt-4 text-lg text-secondary max-w-2xl mx-auto scroll-animate" style="transition-delay: 100ms;">
