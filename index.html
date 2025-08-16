@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextGen Ventures - Fueling the Future</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles and animations */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F7F8FA;
+            color: #1a202c;
+        }
+
+        /* Animation for elements fading in on scroll */
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .scroll-animate.in-view {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Hero section text animation */
+        .hero-title-char {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInChar 0.8s forwards;
+        }
+
+        @keyframes fadeInChar {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Gradient text effect */
+        .gradient-text {
+            background: linear-gradient(45deg, #4F46E5, #0EA5E9);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+
+        /* Custom button style */
+        .btn-primary {
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.2), 0 4px 6px -2px rgba(79, 70, 229, 0.1);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-sm shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-gray-800">NextGen <span class="text-indigo-600">Ventures</span></a>
+            <nav class="hidden md:flex space-x-8 items-center">
+                <a href="#about" class="text-gray-600 hover:text-indigo-600 transition">About</a>
+                <a href="#portfolio" class="text-gray-600 hover:text-indigo-600 transition">Portfolio</a>
+                <a href="#thesis" class="text-gray-600 hover:text-indigo-600 transition">Thesis</a>
+                <a href="#contact" class="bg-indigo-600 text-white px-5 py-2 rounded-full font-medium btn-primary">Get Funded</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+             <a href="#about" class="block py-2 text-gray-600 hover:text-indigo-600">About</a>
+             <a href="#portfolio" class="block py-2 text-gray-600 hover:text-indigo-600">Portfolio</a>
+             <a href="#thesis" class="block py-2 text-gray-600 hover:text-indigo-600">Thesis</a>
+             <a href="#contact" class="block mt-2 bg-indigo-600 text-white text-center px-5 py-2 rounded-full font-medium">Get Funded</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="min-h-screen flex items-center pt-20 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h1 id="hero-title" class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-gray-900 leading-tight mb-6">
+                    <!-- Text will be injected by JS -->
+                </h1>
+                <p class="max-w-3xl mx-auto text-lg md:text-xl text-gray-600 mb-10 scroll-animate">
+                    We invest in the next generation of builders, dreamers, and innovators. If you have a bold idea that will shape the future, we want to hear from you.
+                </p>
+                <a href="#contact" class="bg-indigo-600 text-white px-8 py-4 rounded-full font-semibold text-lg btn-primary scroll-animate">
+                    Pitch Your Startup
+                </a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 lg:py-32">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 scroll-animate">We're More Than Just Capital</h2>
+                    <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto scroll-animate" style="transition-delay: 100ms;">
+                        We are a team of former founders and operators dedicated to helping young entrepreneurs succeed. We provide not just funding, but mentorship, resources, and a network to help you scale.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <!-- Feature 1 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg scroll-animate" style="transition-delay: 200ms;">
+                        <div class="text-indigo-500 mb-4">
+                            <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Early-Stage Funding</h3>
+                        <p class="text-gray-600">We invest in pre-seed and seed stage startups, providing the first institutional capital to get your idea off the ground.</p>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg scroll-animate" style="transition-delay: 300ms;">
+                        <div class="text-indigo-500 mb-4">
+                             <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M15 21a6 6 0 00-9-5.197m0 0A10.99 10.99 0 0112 12a10.99 10.99 0 017 4.803"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Founder Network</h3>
+                        <p class="text-gray-600">Join an exclusive community of ambitious young founders. Share challenges, celebrate wins, and grow together.</p>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg scroll-animate" style="transition-delay: 400ms;">
+                        <div class="text-indigo-500 mb-4">
+                           <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Expert Mentorship</h3>
+                        <p class="text-gray-600">Get hands-on guidance from industry experts who have built and scaled successful companies from the ground up.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="py-20 lg:py-32 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 scroll-animate">The Visionaries We've Backed</h2>
+                    <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto scroll-animate" style="transition-delay: 100ms;">
+                        We are proud to partner with companies that are not just building businesses, but creating the future.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Portfolio Item 1 -->
+                    <div class="rounded-2xl overflow-hidden shadow-lg group transform hover:-translate-y-2 transition-transform duration-300 scroll-animate" style="transition-delay: 200ms;">
+                        <img src="https://placehold.co/600x400/E2E8F0/4A5568?text=InnovateAI" alt="InnovateAI" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">InnovateAI</h3>
+                            <p class="text-gray-600 mb-4">Democratizing machine learning for small businesses.</p>
+                            <span class="text-sm font-semibold text-indigo-600 bg-indigo-100 py-1 px-3 rounded-full">AI & ML</span>
+                        </div>
+                    </div>
+                    <!-- Portfolio Item 2 -->
+                    <div class="rounded-2xl overflow-hidden shadow-lg group transform hover:-translate-y-2 transition-transform duration-300 scroll-animate" style="transition-delay: 300ms;">
+                        <img src="https://placehold.co/600x400/D1FAE5/10B981?text=EcoSolutions" alt="EcoSolutions" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">EcoSolutions</h3>
+                            <p class="text-gray-600 mb-4">Sustainable packaging solutions from recycled materials.</p>
+                            <span class="text-sm font-semibold text-green-600 bg-green-100 py-1 px-3 rounded-full">Sustainability</span>
+                        </div>
+                    </div>
+                    <!-- Portfolio Item 3 -->
+                    <div class="rounded-2xl overflow-hidden shadow-lg group transform hover:-translate-y-2 transition-transform duration-300 scroll-animate" style="transition-delay: 400ms;">
+                        <img src="https://placehold.co/600x400/FEF3C7/F59E0B?text=FinTech+Future" alt="FinTech Future" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">FinTech Future</h3>
+                            <p class="text-gray-600 mb-4">A mobile-first banking platform for Gen Z.</p>
+                            <span class="text-sm font-semibold text-amber-600 bg-amber-100 py-1 px-3 rounded-full">FinTech</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Thesis Section -->
+        <section id="thesis" class="py-20 lg:py-32">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 scroll-animate">Our Investment Thesis</h2>
+                    <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto scroll-animate" style="transition-delay: 100ms;">
+                        We believe in founder-market fit and invest in people first. We look for these key traits in the founders we back.
+                    </p>
+                </div>
+                <div class="max-w-4xl mx-auto">
+                    <div class="space-y-8">
+                        <!-- Thesis Point 1 -->
+                        <div class="flex items-start space-x-6 scroll-animate" style="transition-delay: 200ms;">
+                            <div class="flex-shrink-0 bg-indigo-500 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold">1</div>
+                            <div>
+                                <h3 class="text-2xl font-semibold text-gray-800">Unwavering Passion</h3>
+                                <p class="mt-2 text-gray-600">We back founders who are obsessed with solving a specific problem. This passion is the fuel that gets startups through the inevitable tough times.</p>
+                            </div>
+                        </div>
+                        <!-- Thesis Point 2 -->
+                        <div class="flex items-start space-x-6 scroll-animate" style="transition-delay: 300ms;">
+                            <div class="flex-shrink-0 bg-indigo-500 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold">2</div>
+                            <div>
+                                <h3 class="text-2xl font-semibold text-gray-800">Unique Insight</h3>
+                                <p class="mt-2 text-gray-600">You see the world differently. You've identified a unique angle or an overlooked opportunity in a large, growing market.</p>
+                            </div>
+                        </div>
+                        <!-- Thesis Point 3 -->
+                        <div class="flex items-start space-x-6 scroll-animate" style="transition-delay: 400ms;">
+                            <div class="flex-shrink-0 bg-indigo-500 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold">3</div>
+                            <div>
+                                <h3 class="text-2xl font-semibold text-gray-800">Bias for Action</h3>
+                                <p class="mt-2 text-gray-600">Great founders are builders. You move fast, learn quickly, and constantly iterate on your product and strategy based on real-world feedback.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 lg:py-32 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                 <h2 class="text-3xl md:text-4xl font-bold text-gray-800 scroll-animate">Ready to build the future?</h2>
+                 <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto scroll-animate" style="transition-delay: 100ms;">
+                     We're always excited to meet passionate founders. If you think we'd be a good fit, we'd love to learn more about what you're building.
+                 </p>
+                 <a href="mailto:pitch@nextgen.vc" class="mt-10 inline-block bg-indigo-600 text-white px-8 py-4 rounded-full font-semibold text-lg btn-primary scroll-animate" style="transition-delay: 200ms;">
+                     Send Us Your Deck
+                 </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-12 text-center">
+            <p>&copy; 2024 NextGen Ventures. All rights reserved.</p>
+            <p class="text-sm text-gray-400 mt-2">Investing in the boldest ideas from the brightest young minds.</p>
+        </div>
+    </footer>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // --- Mobile Menu Toggle ---
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // --- Scroll Animation Logic ---
+            const animatedElements = document.querySelectorAll('.scroll-animate');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('in-view');
+                    }
+                });
+            }, {
+                threshold: 0.1 // Trigger when 10% of the element is visible
+            });
+
+            animatedElements.forEach(element => {
+                observer.observe(element);
+            });
+
+            // --- Hero Title Character Animation ---
+            const heroTitle = document.getElementById('hero-title');
+            const titleText = "Investing In The <span class='gradient-text'>Next Wave</span> Of Innovation";
+            
+            // Clear existing content and split text into characters
+            heroTitle.innerHTML = '';
+            titleText.split('').forEach((char, index) => {
+                const span = document.createElement('span');
+                // Use innerHTML to correctly render the span tag for the gradient
+                if (char === '<') {
+                    const endTagIndex = titleText.indexOf('>', index);
+                    span.innerHTML = titleText.substring(index, endTagIndex + 1);
+                    // This is a simplified approach; it works for this specific case
+                    // A more robust solution would parse the HTML properly.
+                    // For now, we manually skip the characters within the tags.
+                    // This part is tricky, let's just apply the animation to the wrapper.
+                }
+                span.innerHTML = char;
+                span.classList.add('hero-title-char');
+                span.style.animationDelay = `${index * 0.02}s`;
+                heroTitle.appendChild(span);
+            });
+            // A better way for the gradient text part:
+            heroTitle.innerHTML = titleText.replace(/<span class='gradient-text'>Next Wave<\/span>/g, "<span class='gradient-text hero-title-char' style='animation-delay: 0.5s;'>Next Wave</span>")
+                                         .replace(/([^<]+)(?![^>]*>)/g, (match) => {
+                                             return match.split('').map((char, index) => `<span class="hero-title-char" style="animation-delay:${index * 0.02}s">${char}</span>`).join('');
+                                         });
+
+        });
+    </script>
+</body>
+</html>
