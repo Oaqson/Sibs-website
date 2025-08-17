@@ -134,6 +134,15 @@
         .community-card h3, .community-card p {
             text-shadow: 0 2px 4px rgba(0,0,0,0.5);
         }
+        
+        /* Styles for the new Brands section */
+        .brands-grid-item {
+            transform: scale(1);
+            transition: transform 0.3s ease;
+        }
+        .brands-grid-item:hover {
+            transform: scale(1.05);
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -147,6 +156,7 @@
                 <a href="#community" class="text-secondary hover:text-indigo-600 transition">Community</a>
                 <a href="#team" class="text-secondary hover:text-indigo-600 transition">Team</a>
                 <a href="#portfolio" class="text-secondary hover:text-indigo-600 transition">Portfolio</a>
+                <a href="#brands" class="text-secondary hover:text-indigo-600 transition">Brands</a>
                 <a href="#thesis" class="text-secondary hover:text-indigo-600 transition">Thesis</a>
                 <a href="#contact" class="bg-indigo-600 text-white px-5 py-2 rounded-full font-medium btn-primary">Get Funded</a>
                  <!-- Dark Mode Toggle -->
@@ -165,6 +175,7 @@
              <a href="#community" class="block py-2 text-secondary hover:text-indigo-600">Community</a>
              <a href="#team" class="block py-2 text-secondary hover:text-indigo-600">Team</a>
              <a href="#portfolio" class="block py-2 text-secondary hover:text-indigo-600">Portfolio</a>
+             <a href="#brands" class="block py-2 text-secondary hover:text-indigo-600">Brands</a>
              <a href="#thesis" class="block py-2 text-secondary hover:text-indigo-600">Thesis</a>
              <a href="#contact" class="block mt-2 bg-indigo-600 text-white text-center px-5 py-2 rounded-full font-medium">Get Funded</a>
         </div>
@@ -347,8 +358,226 @@
             </div>
         </section>
 
+        <!-- New Brands Section -->
+        <section id="brands" class="py-20 lg:py-32 bg-primary">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-headings scroll-animate">Our Portfolio Companies</h2>
+                    <p class="mt-4 text-lg text-secondary max-w-2xl mx-auto scroll-animate" style="transition-delay: 100ms;">
+                        We are proud to have invested in these world-class brands, fueling their innovation and growth.
+                    </p>
+                </div>
+                <!-- This div will contain the brand logos -->
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6">
+                    <!-- Brands will be generated here -->
+                    
+                    <!-- Brand 1 -->
+                    <div class="bg-secondary rounded-2xl p-4 flex justify-center items-center brands-grid-item scroll-animate" style="transition-delay: 100ms;">
+                        <img loading="lazy" src="https://placehold.co/120x120/E2E8F0/111827?text=Google" alt="Google" class="w-full h-full object-contain">
+                    </div>
+                    <!-- Brand 2 -->
+                    <div class="bg-secondary rounded-2xl p-4 flex justify-center items-center brands-grid-item scroll-animate" style="transition-delay: 120ms;">
+                        <img loading="lazy" src="https://placehold.co/120x120/E2E8F0/111827?text=Apple" alt="Apple" class="w-full h-full object-contain">
+                    </div>
+                    <!-- Brand 3 -->
+                    <div class="bg-secondary rounded-2xl p-4 flex justify-center items-center brands-grid-item scroll-animate" style="transition-delay: 140ms;">
+                        <img loading="lazy" src="https://placehold.co/120x120/E2E8F0/111827?text=Amazon" alt="Amazon" class="w-full h-full object-contain">
+                    </div>
+                    <!-- Brand 4 -->
+                    <div class="bg-secondary rounded-2xl p-4 flex justify-center items-center brands-grid-item scroll-animate" style="transition-delay: 160ms;">
+                        <img loading="lazy" src="https://placehold.co/120x120/E2E8F0/111827?text=Microsoft" alt="Microsoft" class="w-full h-full object-contain">
+                    </div>
+                    <!-- Brand 5 -->
+                    <div class="bg-secondary rounded-2xl p-4 flex justify-center items-center brands-grid-item scroll-animate" style="transition-delay: 180ms;">
+                        <img loading="lazy" src="https://placehold.co/120x120/E2E8F0/111827?text=CocaCola" alt="CocaCola" class="w-full h-full object-contain">
+                    </div>
+                    <!-- Brand 6 -->
+                    <div class="bg-secondary rounded-2xl p-4 flex justify-center items-center brands-grid-item scroll-animate" style="transition-delay: 200ms;">
+                        <img loading="lazy" src="https://placehold.co/120x120/E2E8F0/111827?text=Samsung" alt="Samsung" class="w-full h-full object-contain">
+                    </div>
+                    <!-- Brand 7 -->
+                    <div class="bg-secondary rounded-2xl p-4 flex justify-center items-center brands-grid-item scroll-animate" style="transition-delay: 220ms;">
+                        <img loading="lazy" src="https://placehold.co/120x120/E2E8F0/111827?text=Toyota" alt="Toyota" class="w-full h-full object-contain">
+                    </div>
+                    <!-- Brand 8 -->
+                    <div class="bg-secondary rounded-2xl p-4 flex justify-center items-center brands-grid-item scroll-animate" style="transition-delay: 240ms;">
+                        <img loading="lazy" src="https://placehold.co/120x120/E2E8F0/111827?text=Mercedes" alt="Mercedes" class="w-full h-full object-contain">
+                    </div>
+                    <!-- Brand 9 -->
+                    <div class="bg-secondary rounded-2xl p-4 flex justify-center items-center brands-grid-item scroll-animate" style="transition-delay: 260ms;">
+                        <img loading="lazy" src="https://placehold.co/120x120/E2E8F0/111827?text=IBM" alt="IBM" class="w-full h-full object-contain">
+                    </div>
+                    <!-- Brand 10 -->
+                    <div class="bg-secondary rounded-2xl p-4 flex justify-center items-center brands-grid-item scroll-animate" style="transition-delay: 280ms;">
+                        <img loading="lazy" src="https://placehold.co/120x120/E2E8F0/111827?text=McDonald's" alt="McDonald's" class="w-full h-full object-contain">
+                    </div>
+                    <!-- Brand 11 -->
+                    <div class="bg-secondary rounded-2xl p-4 flex justify-center items-center brands-grid-item scroll-animate" style="transition-delay: 300ms;">
+                        <img loading="lazy" src="https://placehold.co/120x120/E2E8F0/111827?text=Intel" alt="Intel" class="w-full h-full object-contain">
+                    </div>
+                    <!-- Brand 12 -->
+                    <div class="bg-secondary rounded-2xl p-4 flex justify-center items-center brands-grid-item scroll-animate" style="transition-delay: 320ms;">
+                        <img loading="lazy" src="https://placehold.co/120x120/E2E8F0/111827?text=Visa" alt="Visa" class="w-full h-full object-contain">
+                    </div>
+                    <!-- Brand 13 -->
+                    <div class="bg-secondary rounded-2xl p-4 flex justify-center items-center brands-grid-item scroll-animate" style="transition-delay: 340ms;">
+                        <img loading="lazy" src="https://placehold.co/120x120/E2E8F0/111827?text=Disney" alt="Disney" class="w-full h-full object-contain">
+                    </div>
+                    <!-- Brand 14 -->
+                    <div class="bg-secondary rounded-2xl p-4 flex justify-center items-center brands-grid-item scroll-animate" style="transition-delay: 360ms;">
+                        <img loading="lazy" src="https://placehold.co/120x120/E2E8F0/111827?text=Louis+Vuitton" alt="Louis Vuitton" class="w-full h-full object-contain">
+                    </div>
+                    <!-- Brand 15 -->
+                    <div class="bg-secondary rounded-2xl p-4 flex justify-center items-center brands-grid-item scroll-animate" style="transition-delay: 380ms;">
+                        <img loading="lazy" src="https://placehold.co/120x120/E2E8F0/111827?text=Cisco" alt="Cisco" class="w-full h-full object-contain">
+                    </div>
+                    <!-- Brand 16 -->
+                    <div class="bg-secondary rounded-2xl p-4 flex justify-center items-center brands-grid-item scroll-animate" style="transition-delay: 400ms;">
+                        <img loading="lazy" src="https://placehold.co/120x120/E2E8F0/111827?text=Oracle" alt="Oracle" class="w-full h-full object-contain">
+                    </div>
+                    <!-- Brand 17 -->
+                    <div class="bg-secondary rounded-2xl p-4 flex justify-center items-center brands-grid-item scroll-animate" style="transition-delay: 420ms;">
+                        <img loading="lazy" src="https://placehold.co/120x120/E2E8F0/111827?text=Nike" alt="Nike" class="w-full h-full object-contain">
+                    </div>
+                    <!-- Brand 18 -->
+                    <div class="bg-secondary rounded-2xl p-4 flex justify-center items-center brands-grid-item scroll-animate" style="transition-delay: 440ms;">
+                        <img loading="lazy" src="https://placehold.co/120x120/E2E8F0/111827?text=Walmart" alt="Walmart" class="w-full h-full object-contain">
+                    </div>
+                    <!-- Brand 19 -->
+                    <div class="bg-secondary rounded-2xl p-4 flex justify-center items-center brands-grid-item scroll-animate" style="transition-delay: 460ms;">
+                        <img loading="lazy" src="https://placehold.co/120x120/E2E8F0/111827?text=SAP" alt="SAP" class="w-full h-full object-contain">
+                    </div>
+                    <!-- Brand 20 -->
+                    <div class="bg-secondary rounded-2xl p-4 flex justify-center items-center brands-grid-item scroll-animate" style="transition-delay: 480ms;">
+                        <img loading="lazy" src="https://placehold.co/120x120/E2E8F0/111827?text=PepsiCo" alt="PepsiCo" class="w-full h-full object-contain">
+                    </div>
+                    <!-- Brand 21 -->
+                    <div class="bg-secondary rounded-2xl p-4 flex justify-center items-center brands-grid-item scroll-animate" style="transition-delay: 500ms;">
+                        <img loading="lazy" src="https://placehold.co/120x120/E2E8F0/111827?text=Verizon" alt="Verizon" class="w-full h-full object-contain">
+                    </div>
+                    <!-- Brand 22 -->
+                    <div class="bg-secondary rounded-2xl p-4 flex justify-center items-center brands-grid-item scroll-animate" style="transition-delay: 520ms;">
+                        <img loading="lazy" src="https://placehold.co/120x120/E2E8F0/111827?text=Starbucks" alt="Starbucks" class="w-full h-full object-contain">
+                    </div>
+                    <!-- Brand 23 -->
+                    <div class="bg-secondary rounded-2xl p-4 flex justify-center items-center brands-grid-item scroll-animate" style="transition-delay: 540ms;">
+                        <img loading="lazy" src="https://placehold.co/120x120/E2E8F0/111827?text=Gucci" alt="Gucci" class="w-full h-full object-contain">
+                    </div>
+                    <!-- Brand 24 -->
+                    <div class="bg-secondary rounded-2xl p-4 flex justify-center items-center brands-grid-item scroll-animate" style="transition-delay: 560ms;">
+                        <img loading="lazy" src="https://placehold.co/120x120/E2E8F0/111827?text=Porsche" alt="Porsche" class="w-full h-full object-contain">
+                    </div>
+                    <!-- Brand 25 -->
+                    <div class="bg-secondary rounded-2xl p-4 flex justify-center items-center brands-grid-item scroll-animate" style="transition-delay: 580ms;">
+                        <img loading="lazy" src="https://placehold.co/120x120/E2E8F0/111827?text=Hermès" alt="Hermès" class="w-full h-full object-contain">
+                    </div>
+                    <!-- Brand 26 -->
+                    <div class="bg-secondary rounded-2xl p-4 flex justify-center items-center brands-grid-item scroll-animate" style="transition-delay: 600ms;">
+                        <img loading="lazy" src="https://placehold.co/120x120/E2E8F0/111827?text=Mastercard" alt="Mastercard" class="w-full h-full object-contain">
+                    </div>
+                    <!-- Brand 27 -->
+                    <div class="bg-secondary rounded-2xl p-4 flex justify-center items-center brands-grid-item scroll-animate" style="transition-delay: 620ms;">
+                        <img loading="lazy" src="https://placehold.co/120x120/E2E8F0/111827?text=Budweiser" alt="Budweiser" class="w-full h-full object-contain">
+                    </div>
+                    <!-- Brand 28 -->
+                    <div class="bg-secondary rounded-2xl p-4 flex justify-center items-center brands-grid-item scroll-animate" style="transition-delay: 640ms;">
+                        <img loading="lazy" src="https://placehold.co/120x120/E2E8F0/111827?text=IKEA" alt="IKEA" class="w-full h-full object-contain">
+                    </div>
+                    <!-- Brand 29 -->
+                    <div class="bg-secondary rounded-2xl p-4 flex justify-center items-center brands-grid-item scroll-animate" style="transition-delay: 660ms;">
+                        <img loading="lazy" src="https://placehold.co/120x120/E2E8F0/111827?text=Accenture" alt="Accenture" class="w-full h-full object-contain">
+                    </div>
+                    <!-- Brand 30 -->
+                    <div class="bg-secondary rounded-2xl p-4 flex justify-center items-center brands-grid-item scroll-animate" style="transition-delay: 680ms;">
+                        <img loading="lazy" src="https://placehold.co/120x120/E2E8F0/111827?text=Colgate" alt="Colgate" class="w-full h-full object-contain">
+                    </div>
+                    <!-- Brand 31 -->
+                    <div class="bg-secondary rounded-2xl p-4 flex justify-center items-center brands-grid-item scroll-animate" style="transition-delay: 700ms;">
+                        <img loading="lazy" src="https://placehold.co/120x120/E2E8F0/111827?text=Nestlé" alt="Nestlé" class="w-full h-full object-contain">
+                    </div>
+                    <!-- Brand 32 -->
+                    <div class="bg-secondary rounded-2xl p-4 flex justify-center items-center brands-grid-item scroll-animate" style="transition-delay: 720ms;">
+                        <img loading="lazy" src="https://placehold.co/120x120/E2E8F0/111827?text=J.P.+Morgan" alt="J.P. Morgan" class="w-full h-full object-contain">
+                    </div>
+                    <!-- Brand 33 -->
+                    <div class="bg-secondary rounded-2xl p-4 flex justify-center items-center brands-grid-item scroll-animate" style="transition-delay: 740ms;">
+                        <img loading="lazy" src="https://placehold.co/120x120/E2E8F0/111827?text=Tesla" alt="Tesla" class="w-full h-full object-contain">
+                    </div>
+                    <!-- Brand 34 -->
+                    <div class="bg-secondary rounded-2xl p-4 flex justify-center items-center brands-grid-item scroll-animate" style="transition-delay: 760ms;">
+                        <img loading="lazy" src="https://placehold.co/120x120/E2E8F0/111827?text=BMW" alt="BMW" class="w-full h-full object-contain">
+                    </div>
+                    <!-- Brand 35 -->
+                    <div class="bg-secondary rounded-2xl p-4 flex justify-center items-center brands-grid-item scroll-animate" style="transition-delay: 780ms;">
+                        <img loading="lazy" src="https://placehold.co/120x120/E2E8F0/111827?text=T-Mobile" alt="T-Mobile" class="w-full h-full object-contain">
+                    </div>
+                    <!-- Brand 36 -->
+                    <div class="bg-secondary rounded-2xl p-4 flex justify-center items-center brands-grid-item scroll-animate" style="transition-delay: 800ms;">
+                        <img loading="lazy" src="https://placehold.co/120x120/E2E8F0/111827?text=Gillette" alt="Gillette" class="w-full h-full object-contain">
+                    </div>
+                    <!-- Brand 37 -->
+                    <div class="bg-secondary rounded-2xl p-4 flex justify-center items-center brands-grid-item scroll-animate" style="transition-delay: 820ms;">
+                        <img loading="lazy" src="https://placehold.co/120x120/E2E8F0/111827?text=Chanel" alt="Chanel" class="w-full h-full object-contain">
+                    </div>
+                    <!-- Brand 38 -->
+                    <div class="bg-secondary rounded-2xl p-4 flex justify-center items-center brands-grid-item scroll-animate" style="transition-delay: 840ms;">
+                        <img loading="lazy" src="https://placehold.co/120x120/E2E8F0/111827?text=Adobe" alt="Adobe" class="w-full h-full object-contain">
+                    </div>
+                    <!-- Brand 39 -->
+                    <div class="bg-secondary rounded-2xl p-4 flex justify-center items-center brands-grid-item scroll-animate" style="transition-delay: 860ms;">
+                        <img loading="lazy" src="https://placehold.co/120x120/E2E8F0/111827?text=PwC" alt="PwC" class="w-full h-full object-contain">
+                    </div>
+                    <!-- Brand 40 -->
+                    <div class="bg-secondary rounded-2xl p-4 flex justify-center items-center brands-grid-item scroll-animate" style="transition-delay: 880ms;">
+                        <img loading="lazy" src="https://placehold.co/120x120/E2E8F0/111827?text=Adidas" alt="Adidas" class="w-full h-full object-contain">
+                    </div>
+                    <!-- Brand 41 -->
+                    <div class="bg-secondary rounded-2xl p-4 flex justify-center items-center brands-grid-item scroll-animate" style="transition-delay: 900ms;">
+                        <img loading="lazy" src="https://placehold.co/120x120/E2E8F0/111827?text=Siemens" alt="Siemens" class="w-full h-full object-contain">
+                    </div>
+                    <!-- Brand 42 -->
+                    <div class="bg-secondary rounded-2xl p-4 flex justify-center items-center brands-grid-item scroll-animate" style="transition-delay: 920ms;">
+                        <img loading="lazy" src="https://placehold.co/120x120/E2E8F0/111827?text=General+Electric" alt="General Electric" class="w-full h-full object-contain">
+                    </div>
+                    <!-- Brand 43 -->
+                    <div class="bg-secondary rounded-2xl p-4 flex justify-center items-center brands-grid-item scroll-animate" style="transition-delay: 940ms;">
+                        <img loading="lazy" src="https://placehold.co/120x120/E2E8F0/111827?text=Honda" alt="Honda" class="w-full h-full object-contain">
+                    </div>
+                    <!-- Brand 44 -->
+                    <div class="bg-secondary rounded-2xl p-4 flex justify-center items-center brands-grid-item scroll-animate" style="transition-delay: 960ms;">
+                        <img loading="lazy" src="https://placehold.co/120x120/E2E8F0/111827?text=L'Oréal" alt="L'Oréal" class="w-full h-full object-contain">
+                    </div>
+                    <!-- Brand 45 -->
+                    <div class="bg-secondary rounded-2xl p-4 flex justify-center items-center brands-grid-item scroll-animate" style="transition-delay: 980ms;">
+                        <img loading="lazy" src="https://placehold.co/120x120/E2E8F0/111827?text=Hyundai" alt="Hyundai" class="w-full h-full object-contain">
+                    </div>
+                    <!-- Brand 46 -->
+                    <div class="bg-secondary rounded-2xl p-4 flex justify-center items-center brands-grid-item scroll-animate" style="transition-delay: 1000ms;">
+                        <img loading="lazy" src="https://placehold.co/120x120/E2E8F0/111827?text=AT&T" alt="AT&T" class="w-full h-full object-contain">
+                    </div>
+                    <!-- Brand 47 -->
+                    <div class="bg-secondary rounded-2xl p-4 flex justify-center items-center brands-grid-item scroll-animate" style="transition-delay: 1020ms;">
+                        <img loading="lazy" src="https://placehold.co/120x120/E2E8F0/111827?text=KFC" alt="KFC" class="w-full h-full object-contain">
+                    </div>
+                    <!-- Brand 48 -->
+                    <div class="bg-secondary rounded-2xl p-4 flex justify-center items-center brands-grid-item scroll-animate" style="transition-delay: 1040ms;">
+                        <img loading="lazy" src="https://placehold.co/120x120/E2E8F0/111827?text=UPS" alt="UPS" class="w-full h-full object-contain">
+                    </div>
+                    <!-- Brand 49 -->
+                    <div class="bg-secondary rounded-2xl p-4 flex justify-center items-center brands-grid-item scroll-animate" style="transition-delay: 1060ms;">
+                        <img loading="lazy" src="https://placehold.co/120x120/E2E8F0/111827?text=Netflix" alt="Netflix" class="w-full h-full object-contain">
+                    </div>
+                    <!-- Brand 50 -->
+                    <div class="bg-secondary rounded-2xl p-4 flex justify-center items-center brands-grid-item scroll-animate" style="transition-delay: 1080ms;">
+                        <img loading="lazy" src="https://placehold.co/120x120/E2E8F0/111827?text=Starbucks" alt="Starbucks" class="w-full h-full object-contain">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
         <!-- Thesis Section -->
-        <section id="thesis" class="py-20 lg:py-32 bg-primary">
+        <section id="thesis" class="py-20 lg:py-32 bg-secondary">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold text-headings scroll-animate">Our Investment Thesis</h2>
@@ -388,7 +617,7 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="py-20 lg:py-32 bg-secondary">
+        <section id="contact" class="py-20 lg:py-32 bg-primary">
             <div class="container mx-auto px-6 text-center">
                  <h2 class="text-3xl md:text-4xl font-bold text-headings scroll-animate">Ready to build the future?</h2>
                  <p class="mt-4 text-lg text-secondary max-w-2xl mx-auto scroll-animate" style="transition-delay: 100ms;">
@@ -526,4 +755,3 @@
     </script>
 </body>
 </html>
--
