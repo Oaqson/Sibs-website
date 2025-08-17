@@ -1,2 +1,2 @@
 # Sibs-website
-Youth Venture Caoital
+Youth Venture Capital
